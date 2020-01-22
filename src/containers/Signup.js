@@ -72,10 +72,21 @@ export default function Signup(props) {
       <form onSubmit={handleConfirmationSubmit}>
         <FormGroup controlId="confirmationCode" bsSize="large">
           <ControlLabel>Confirmation Code</ControlLabel>
-          <FormControl autoFocus type="tel" onChange={handleFieldChange} value={fields.confirmationCode}/>
+          <FormControl
+            autoFocus
+            type="tel"
+            onChange={handleFieldChange}
+            value={fields.confirmationCode}
+          />
           <HelpBlock>Please check your email for the code.</HelpBlock>
         </FormGroup>
-        <LoaderButton block type="submit" bsSize="large" isLoading={isLoading} disabled={!validateConfirmationForm()}>
+        <LoaderButton
+          block
+          type="submit"
+          bsSize="large"
+          isLoading={isLoading}
+          disabled={!validateConfirmationForm()}
+        >
           Verify
         </LoaderButton>
       </form>
@@ -87,17 +98,36 @@ export default function Signup(props) {
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
           <ControlLabel>Email</ControlLabel>
-          <FormControl autoFocus type="email" value={fields.email} onChange={handleFieldChange}/>
+          <FormControl
+            autoFocus
+            type="email"
+            value={fields.email}
+            onChange={handleFieldChange}
+          />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
           <ControlLabel>Password</ControlLabel>
-          <FormControl type="password" value={fields.password} onChange={handleFieldChange} />        
+          <FormControl
+            type="password"
+            value={fields.password}
+            onChange={handleFieldChange}
+          />
         </FormGroup>
         <FormGroup controlId="confirmPassword" bsSize="large">
           <ControlLabel>Confirm Password</ControlLabel>
-          <FormControl type="password" onChange={handleFieldChange} value={fields.confirmPassword} />
+          <FormControl
+            type="password"
+            onChange={handleFieldChange}
+            value={fields.confirmPassword}
+          />
         </FormGroup>
-        <LoaderButton block type="submit" bsSize="large" isLoading={isLoading} disabled={!validateForm()}>
+        <LoaderButton
+          block
+          type="submit"
+          bsSize="large"
+          isLoading={isLoading}
+          disabled={!validateForm()}
+        >
           Signup
         </LoaderButton>
       </form>
